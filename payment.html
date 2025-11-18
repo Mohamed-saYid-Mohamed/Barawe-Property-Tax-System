@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Make Payment | Barawe Property Tax</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container payment-wrapper">
+
+    <h1>Make a Payment</h1>
+
+    <div class="payment-box">
+
+        <!-- Property Summary -->
+        <div class="summary">
+            <h2>Property Summary</h2>
+            <p><strong>Property ID:</strong> PR-001</p>
+            <p><strong>Address:</strong> Barawe – District 2</p>
+            <p><strong>Tax Amount:</strong> $150</p>
+        </div>
+
+        <!-- Payment Method -->
+        <div class="payment-section">
+            <h2>Select Payment Method</h2>
+
+            <select id="method" class="input">
+                <option value="evc">EVC+ (Hormuud)</option>
+                <option value="zaad">ZAAD Wallet</option>
+                <option value="card">Credit/Debit Card</option>
+            </select>
+
+            <!-- Mobile Payment -->
+            <div id="mobilePay" class="hidden">
+                <label>Phone Number</label>
+                <input class="input" type="text" placeholder="Enter phone number">
+            </div>
+
+            <!-- Card Payment -->
+            <div id="cardPay" class="hidden">
+                <label>Card Number</label>
+                <input class="input" type="text" placeholder="XXXX XXXX XXXX XXXX">
+
+                <label>Expiry Date</label>
+                <input class="input" type="text" placeholder="MM/YY">
+
+                <label>CVV</label>
+                <input class="input" type="text" placeholder="123">
+            </div>
+
+            <button class="btn full">Pay Now</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+const method = document.getElementById("method");
+const mobilePay = document.getElementById("mobilePay");
+const cardPay = document.getElementById("cardPay");
+
+method.onchange = function() {
+    mobilePay.classList.add("hidden");
+    cardPay.classList.add("hidden");
+
+    if (method.value === "evc" || method.value === "zaad") {
+        mobilePay.classList.remove("hidden");
+    } 
+    else if (method.value === "card") {
+        cardPay.classList.remove("hidden");
+    }
+}
+</script>
+
+</body>
+</html>

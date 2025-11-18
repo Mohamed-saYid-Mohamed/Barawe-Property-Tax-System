@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barawe Property Tax System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ 
+<header>
+    <div class="container header-flex">
+        <h1>Barawe Property Tax System</h1>
+        <nav>
+            <a href="login.html">Login</a>
+            <a href="#calculator">Tax Calculator</a>
+            <a href="#how">How It Works</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Pay Your Property Taxes Easily.</h1>
+        <p>Secure • Digital • Official System of Barawe District</p>
+        <a class="btn" href="register.html">Register Your Property</a>
+    </div>
+</section>
+
+
+<section id="how" class="container how">
+    <h2>How It Works</h2>
+    <div class="steps">
+        <div class="step">1. Create an Account</div>
+        <div class="step">2. Register Your Property</div>
+        <div class="step">3. Calculate Your Tax</div>
+        <div class="step">4. Pay Online</div>
+        <div class="step">5. Download Receipt</div>
+    </div>
+</section>
+
+<section id="calculator" class="container calculator">
+    <h2>Quick Tax Calculator</h2>
+
+    <label>Property Value (USD)</label>
+    <input type="number" id="value" placeholder="Enter value...">
+
+    <label>Tax Rate (%)</label>
+    <input type="number" id="rate" value="1" step="0.1">
+
+    <button onclick="calculateTax()" class="btn">Calculate</button>
+
+    <h3 id="result"></h3>
+</section>
+
+<footer>
+    <p>&copy; 2024 Barawe Municipality | Property Tax Department</p>
+</footer>
+
+<script>
+function calculateTax() {
+    let v = document.getElementById("value").value;
+    let r = document.getElementById("rate").value;
+    if (v === "") return alert("Enter property value");
+
+    let result = (v * (r / 100)).toFixed(2);
+    document.getElementById("result").innerText = "Estimated Tax: $" + result;
+}
+</script>
+
+</body>
+</html>
+

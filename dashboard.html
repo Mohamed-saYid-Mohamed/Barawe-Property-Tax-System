@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Owner Dashboard | Barawe Property Tax</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">My Properties</a></li>
+            <li><a href="#">Payments</a></li>
+            <li><a href="#">Tax Calculator</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <h1>Welcome, Property Owner</h1>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Total Properties</h3>
+                <p>3</p>
+            </div>
+
+            <div class="card">
+                <h3>Outstanding Tax</h3>
+                <p>$450</p>
+            </div>
+
+            <div class="card">
+                <h3>Paid</h3>
+                <p>$900</p>
+            </div>
+        </div>
+
+        <h2>Your Properties</h2>
+
+        <table class="prop-table">
+            <tr>
+                <th>ID</th>
+                <th>Address</th>
+                <th>Tax Due</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>PR-001</td>
+                <td>Barawe - District 2</td>
+                <td>$150</td>
+                <td><span class="badge unpaid">Unpaid</span></td>
+                <td><button class="btn small">Pay</button></td>
+            </tr>
+            <tr>
+                <td>PR-002</td>
+                <td>Barawe - District 4</td>
+                <td>$0</td>
+                <td><span class="badge paid">Paid</span></td>
+                <td><button class="btn small">View</button></td>
+            </tr>
+        </table>
+
+    </main>
+
+</div>
+
+</body>
+</html>

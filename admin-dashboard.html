@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard | Barawe Property Tax</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>Admin Panel</h2>
+        <ul>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Manage Properties</a></li>
+            <li><a href="#">Users</a></li>
+            <li><a href="#">Payments</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Tax Rates</a></li>
+            <li><a href="#">Inspectors</a></li>
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <h1>Welcome, Admin</h1>
+
+        <!-- Overview Cards -->
+        <div class="cards">
+            <div class="card">
+                <h3>Total Taxes Collected</h3>
+                <p>$52,300</p>
+            </div>
+
+            <div class="card">
+                <h3>Registered Properties</h3>
+                <p>128</p>
+            </div>
+
+            <div class="card">
+                <h3>Unpaid Taxes</h3>
+                <p>$7,900</p>
+            </div>
+
+            <div class="card">
+                <h3>Active Users</h3>
+                <p>94</p>
+            </div>
+        </div>
+
+        <!-- PROPERTY TABLE -->
+        <h2>Recent Property Registrations</h2>
+        <table class="prop-table">
+            <tr>
+                <th>ID</th>
+                <th>Owner</th>
+                <th>Address</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>PR-001</td>
+                <td>Ali Mohamed</td>
+                <td>Barawe District 2</td>
+                <td><span class="badge unpaid">Unverified</span></td>
+                <td><button class="btn small">Verify</button></td>
+            </tr>
+
+            <tr>
+                <td>PR-002</td>
+                <td>Asha Ibrahim</td>
+                <td>Barawe District 5</td>
+                <td><span class="badge paid">Verified</span></td>
+                <td><button class="btn small">View</button></td>
+            </tr>
+        </table>
+
+        <!-- REPORTS SECTION -->
+        <h2 style="margin-top: 40px;">Reports</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Monthly Report</h3>
+                <button class="btn small">Download PDF</button>
+            </div>
+
+            <div class="card">
+                <h3>Annual Report</h3>
+                <button class="btn small">Download PDF</button>
+            </div>
+
+            <div class="card">
+                <h3>Custom Report</h3>
+                <button class="btn small">Generate</button>
+            </div>
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
